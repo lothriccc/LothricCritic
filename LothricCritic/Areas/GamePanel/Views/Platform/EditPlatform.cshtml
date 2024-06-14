@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Platform
+@{
+    ViewData["Title"] = "EditPlatform";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Platform Düzenleme Sayfası</h4>
+            <form class="forms-sample" method="post">
+                @Html.HiddenFor(x=>x.PlatformID)
+                <div class="form-group">
+                    <label for="exampleInputName1">İsim</label>
+                    <input type="text" class="form-control" asp-for="PlatformName" id="exampleInputName1" placeholder="Platform İsmini Giriniz">
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+

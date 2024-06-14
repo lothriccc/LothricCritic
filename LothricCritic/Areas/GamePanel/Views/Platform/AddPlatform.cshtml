@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Platform
+
+@{
+    ViewData["Title"] = "AddPlatform";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yeni Platform Girişi</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Platform İsmi</label>
+                    <span asp-validation-for="PlatformName" class="text-danger"></span>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="İsmi Giriniz" asp-for="PlatformName">
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

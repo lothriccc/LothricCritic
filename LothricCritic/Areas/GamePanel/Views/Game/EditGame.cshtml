@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.Game
+@{
+    ViewData["Title"] = "EditGame";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Game Düzenleme Sayfası</h4>
+            <form class="forms-sample" method="post">
+                @Html.HiddenFor(x=>x.GameID)
+                @Html.Label("Şirket Adı")
+                <br />
+                <br />
+                @Html.DropDownListFor(x=>x.CompanyID,(List<SelectListItem>)ViewBag.v, new {@class="form-control"})
+                <br />
+                <div class="form-group">
+                    <label for="exampleInputName1">Oyun İsmi</label>
+                    <input type="text" class="form-control" asp-for="Name" id="exampleInputName1" placeholder="Oyun İsmini Giriniz">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Oyun Açıklaması</label>
+                    <input type="text" class="form-control" asp-for="Description" id="exampleInputName1" placeholder="Oyun Açıklamasını Giriniz">
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Çıkış Tarihi</label>
+                    <input type="text" class="form-control" asp-for="ReleaseDate" id="exampleInputName1" placeholder="Çıkış Tarihini Giriniz">
+
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
