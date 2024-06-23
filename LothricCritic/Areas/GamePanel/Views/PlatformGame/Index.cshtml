@@ -16,18 +16,18 @@
                         <tr>
                             <th>Platform ID</th>
                             <th>Oyun ID</th>
-                          @*  <th>Sil</th>
-                            <th>Güncelle</th>*@
+                         @*   <th>Sil</th>
+                            <th>Güncelle</th> *@
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.PlatformID</td>
-                                <td>@item.GameID</td>
-                                @*<td><a href="/GamePanel/PlatformGame/DeletePlatformGame/@item.PlatformID" class="btn btn-outline-danger">Sil</a></td>
-                                <td><a href="/GamePanel/PlatformGame/EditPlatformGame/@item.PlatformID" class="btn btn-outline-primary">Güncelle</a></td>*@
+                                <td>@item.Platform.PlatformName</td>
+                                <td>@item.Game.Name</td>
+                                @* <td><a href="/GamePanel/PlatformGame/DeletePlatformGame/@item.PlatformID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/GamePanel/PlatformGame/EditPlatformGame/@item.PlatformID" class="btn btn-outline-primary">Güncelle</a></td> *@
                             </tr>
                         }
                     </tbody>

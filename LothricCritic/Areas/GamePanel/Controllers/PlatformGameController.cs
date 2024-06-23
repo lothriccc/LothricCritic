@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace LothricCritic.Areas.GamePanel.Controllers
 {
     [Area("GamePanel")]
-    public class PlatformGameController : Controller
+	[Route("GamePanel/PlatformGame")]
+	public class PlatformGameController : Controller
     {
         PlatformGameManager platformGameManager = new PlatformGameManager(new EfPlatformGameDal());
+        [Route("")]
+        [Route("Index")]
         public IActionResult Index()
         {
-            var values = platformGameManager.TGetAll();
+            var values = platformGameManager.TGetListWithInclude();
             return View(values);
         }
         [HttpGet]
-        public IActionResult AddPlatformGame()
+		[Route("")]
+		[Route("AddPlatformGame")]
+		public IActionResult AddPlatformGame()
         {
             PlatformManager platformManager = new PlatformManager(new EfPlatformDal());
             List<SelectListItem> values1 = (from x in platformManager.TGetAll()
@@ -39,28 +44,33 @@ namespace LothricCritic.Areas.GamePanel.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AddPlatformGame(PlatformGame platformGame)
+		[Route("")]
+		[Route("AddPlatformGame")]
+		public IActionResult AddPlatformGame(PlatformGame platformGame)
         {
             platformGameManager.TAdd(platformGame);
             return RedirectToAction("Index");
         }
-        public IActionResult DeletePlatformGame(int id)
-        {
-            var values = platformGameManager.TGetByID(id);
-            platformGameManager.TDelete(values);
-            return RedirectToAction("Index");
-        }
-        [HttpGet]
-        public IActionResult EditPlatformGame(int id)
-        {
-            var values = platformGameManager.TGetByID(id);
-            return View(values);
-        }
-        [HttpPost]
-        public IActionResult EditPlatformGame(PlatformGame platformGame)
-        {
-            platformGameManager.TUpdate(platformGame);
-            return RedirectToAction("Index");
-        }
+        //[Route("DeletePlatformGame/{id}")]
+        //public IActionResult DeletePlatformGame(int id1,int id2)
+        //{
+        //    var values = platformGameManager.TGetByTwoID(id1,id2);
+        //    platformGameManager.TDelete(values);
+        //    return RedirectToAction("Index");
+        //}
+        //[HttpGet]
+        //[Route("EditPlatformGame/{id}")]
+        //public IActionResult EditPlatformGame(int id1, int id2)
+        //{
+        //    var values = platformGameManager.TGetByTwoID(id1,id2);
+        //    return View(values);
+        //}
+        //[HttpPost]
+        //[Route("EditPlatformGame/{id}")]
+        //public IActionResult EditPlatformGame(PlatformGame platformGame)
+        //{
+        //    platformGameManager.TUpdate(platformGame);
+        //    return RedirectToAction("Index");
+        //}
     }
 }

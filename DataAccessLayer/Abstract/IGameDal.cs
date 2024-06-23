@@ -10,5 +10,6 @@ namespace DataAccessLayer.Abstract
 	public interface IGameDal:IGenericDal<Game>
 	{
 		List<Game> GetGameListWithCompany();
+
 	}
 }

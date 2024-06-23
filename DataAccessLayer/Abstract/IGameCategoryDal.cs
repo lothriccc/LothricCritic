@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface IGameCategoryDal:IGenericDal<GameCategory>
     {
+        List<GameCategory> GetListWithInclude();
     }
 }

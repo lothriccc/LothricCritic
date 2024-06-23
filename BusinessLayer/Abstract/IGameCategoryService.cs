@@ -9,5 +9,6 @@ namespace BusinessLayer.Abstract
 {
     public interface IGameCategoryService:IGenericService<GameCategory>
     {
+        List<GameCategory> TGetListWithInclude();
     }
 }

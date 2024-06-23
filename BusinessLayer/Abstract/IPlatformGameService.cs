@@ -9,5 +9,8 @@ namespace BusinessLayer.Abstract
 {
     public interface IPlatformGameService:IGenericService<PlatformGame>
     {
+        PlatformGame TGetByTwoID(int id1, int id2);
+
+        List<PlatformGame> TGetListWithInclude();
     }
 }

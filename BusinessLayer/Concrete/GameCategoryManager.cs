@@ -33,9 +33,19 @@ namespace BusinessLayer.Concrete
             return _gameCategoryDal.GetListAll();
         }
 
-        public GameCategory TGetByID(int id)
+		public List<GameCategory> TGetAll(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public GameCategory TGetByID(int id)
         {
             return _gameCategoryDal.GetByID(id);
+        }
+
+        public List<GameCategory> TGetListWithInclude()
+        {
+            return _gameCategoryDal.GetListWithInclude();
         }
 
         public void TUpdate(GameCategory t)

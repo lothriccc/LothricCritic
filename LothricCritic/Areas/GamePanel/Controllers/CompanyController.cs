@@ -49,7 +49,7 @@ namespace LothricCritic.Areas.GamePanel.Controllers
         }
         [HttpPost]
         [Route("EditCompany/{id}")]
-        public IActionResult EditCompany(Company company)
+        public IActionResult EdiztCompany(Company company)
         {
             companyManager.TUpdate(company);
             return RedirectToAction("Index");

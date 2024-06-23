@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
 			return _platformDal.GetListAll();
 		}
 
+		public List<Platform> TGetAll(int id)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Platform TGetByID(int id)
 		{
 			return _platformDal.GetByID(id);

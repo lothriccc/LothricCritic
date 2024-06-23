@@ -1,0 +1,18 @@
+﻿<div class="comment-top">
+    <h4>Bir yorum yapın</h4>
+    <div class="comment-bottom">
+        <form asp-action="PartialAddComment" asp-controller="SComment" method="post">
+            <div class="col">
+                <input type="hidden" class="form-control" name="GameID" placeholder="GameID" value="@ViewBag.i" required="">
+            </div>
+            @*<div class="col-7">
+            <input type="hidden" class="form-control" name="CommentUserName" placeholder="@ViewBag.user" value="@ViewBag.user" required="">
+            </div>*@
+            <input type="hidden" class="form-control" id="txtad" name="UserName" placeholder="@ViewBag.user" required="">
+            <input type="text" class="form-control" id="txtkonu" name="Score" placeholder="Puan" required="">
+
+            <textarea class="form-control" id="txtyorum" name="Content" placeholder="Yorumunuz..." required=""></textarea>
+            <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+        </form>
+    </div>
+</div>

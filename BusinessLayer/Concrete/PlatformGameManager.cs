@@ -33,9 +33,24 @@ namespace BusinessLayer.Concrete
             return _platformGameDal.GetListAll();
         }
 
-        public PlatformGame TGetByID(int id)
+		public List<PlatformGame> TGetAll(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public PlatformGame TGetByID(int id)
         {
             return _platformGameDal.GetByID(id);
+        }
+
+        public PlatformGame TGetByTwoID(int id1, int id2)
+        {
+           return _platformGameDal.GetByTwoID(id1, id2);
+        }
+
+        public List<PlatformGame> TGetListWithInclude()
+        {
+            return _platformGameDal.GetListWithInclude();
         }
 
         public void TUpdate(PlatformGame t)

@@ -13,7 +13,8 @@ namespace DataAccessLayer.Concrete.EntityFramework
 {
     public class EfGameDal : GenericRepository<Game>, IGameDal
     {
-        public List<Game> GetGameListWithCompany()
+
+		public List<Game> GetGameListWithCompany()
         {
             using (var context = new Context())
             {

@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concrete.GameCategory
+
+@{
+    ViewData["Title"] = "AddGameCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yeni GameCategory Girişi</h4>
+            <form class="forms-sample" method="post">
+                @Html.Label("Şirket Adı")
+                <br />
+                <br />
+                @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.vc, new {@class="form-control"})
+                <br />
+                @Html.Label("Şirket Adı")
+                <br />
+                <br />
+                @Html.DropDownListFor(x=>x.GameID,(List<SelectListItem>)ViewBag.vg, new {@class="form-control"})
+                <br />
+                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+

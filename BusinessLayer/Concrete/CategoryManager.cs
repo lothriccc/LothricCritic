@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
 			return _categoryDal.GetListAll();
 		}
 
+		public List<Category> TGetAll(int id)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Category TGetByID(int id)
 		{
 			return _categoryDal.GetByID(id);

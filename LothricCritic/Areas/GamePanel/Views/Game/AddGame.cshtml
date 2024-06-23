@@ -20,17 +20,22 @@
 				<div class="form-group">
 					<label for="exampleInputName1">Oyun İsmi</label>
 					<span asp-validation-for="Name" class="text-danger"></span>
-					<input type="text" class="form-control" id="exampleInputName1" placeholder="Şirket İsmi Giriniz" asp-for="Name">
+					<input type="text" class="form-control" id="exampleInputName1"  asp-for="Name">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputName1">Oyun Açıklaması</label>
 					<span asp-validation-for="Description" class="text-danger"></span>
-					<input type="text" class="form-control" id="exampleInputName1" placeholder="Şirket İsmi Giriniz" asp-for="Description">
+					<textarea cols="30" rows="5" asp-for="Description" class="form-control"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="exampleInputName1">Çıkış Tarihi</label>
 					<span asp-validation-for="ReleaseDate" class="text-danger"></span>
-					<input type="text" class="form-control" id="exampleInputName1" placeholder="Şirket İsmi Giriniz" asp-for="ReleaseDate">
+					<input type="text" class="form-control" id="exampleInputName1"  asp-for="ReleaseDate">
+				</div>
+				<div class="form-group">
+					<label for="exampleInputName1">Görsel Linki</label>
+					<span asp-validation-for="ImageUrl" class="text-danger"></span>
+					<input type="text" class="form-control" id="exampleInputName1" asp-for="ImageUrl">
 				</div>
 				<button type="submit" class="btn btn-primary me-2">Kaydet</button>
 			</form>

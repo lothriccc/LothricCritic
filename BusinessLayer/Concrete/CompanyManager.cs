@@ -34,6 +34,11 @@ namespace BusinessLayer.Concrete
 			return _companyDal.GetListAll();
 		}
 
+		public List<Company> TGetAll(int id)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Company TGetByID(int id)
 		{
 			return _companyDal.GetByID(id);

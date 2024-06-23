@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
 			return _gameDal.GetListAll();
 		}
 
+		public List<Game> TGetAll(int id)
+		{
+			return _gameDal.GetListAll(x=>x.GameID==id);
+		}
+
 		public Game TGetByID(int id)
 		{
 			return _gameDal.GetByID(id);
